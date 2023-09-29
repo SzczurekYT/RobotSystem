@@ -1,0 +1,8 @@
+name: RobotSystem
+version: '${version}'
+main: yt.szczurek.robotsystem.RobotSystem
+api-version: '1.20'
+dependencies:
+  - name: MCKotlin-Paper
+    required: true
+authors: [Burzowy_Szczurek]
