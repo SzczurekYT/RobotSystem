@@ -1,5 +1,4 @@
 plugins {
-    id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.9.0'
 }
 
@@ -16,25 +15,21 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven {
+        name = "codemc-reop"
+        url = "https://repo.codemc.org/repository/maven-public/"
+    }
 }
 
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT"
+    // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-}
-
-def targetJavaVersion = 17
-java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-    if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-    }
-}
-
-tasks.withType(JavaCompile).configureEach {
-    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-        options.release = targetJavaVersion
-    }
+    // AuthMe API
+    implementation "fr.xephi:authme:5.6.0-SNAPSHOT"
+    // Command API
+    implementation "dev.jorel:commandapi-bukkit-core:9.2.0"
+    implementation "dev.jorel:commandapi-bukkit-kotlin:9.2.0"
 }
 
 processResources {
