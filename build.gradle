@@ -19,6 +19,7 @@ repositories {
         name = "codemc-reop"
         url = "https://repo.codemc.org/repository/maven-public/"
     }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -30,6 +31,8 @@ dependencies {
     // Command API
     implementation "dev.jorel:commandapi-bukkit-core:9.2.0"
     implementation "dev.jorel:commandapi-bukkit-kotlin:9.2.0"
+    // Dynamic Whitelist
+    implementation 'com.github.SzczurekYT:DynamicWhitelist:v1.0.0'
 }
 
 processResources {
