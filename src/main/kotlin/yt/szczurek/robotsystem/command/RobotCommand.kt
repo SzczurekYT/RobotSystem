@@ -4,7 +4,9 @@ import dev.jorel.commandapi.kotlindsl.*
 import fr.xephi.authme.api.v3.AuthMeApi
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.event.ClickEvent
-import yt.szczurek.robotsystem.*
+import yt.szczurek.robotsystem.generateToken
+import yt.szczurek.robotsystem.robotData
+import yt.szczurek.robotsystem.robotDataByPrefix
 
 fun registerCommands() {
     commandTree("robot") {

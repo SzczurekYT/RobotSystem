@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import yt.szczurek.dynamicwhitelist.api.WhitelistCheckEvent
 
-class JoinListener : Listener {
+class EventListener : Listener {
 
     @EventHandler
     fun onPlayerJoin(event: PlayerJoinEvent) {

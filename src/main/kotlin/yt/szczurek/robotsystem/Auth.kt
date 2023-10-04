@@ -1,7 +1,7 @@
 package yt.szczurek.robotsystem
 
 import java.security.SecureRandom
-import java.util.Base64
+import java.util.*
 
 private val random = SecureRandom()
 private val encoder = Base64.getEncoder()
