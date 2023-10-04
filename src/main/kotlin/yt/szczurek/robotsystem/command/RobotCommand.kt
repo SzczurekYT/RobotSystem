@@ -28,6 +28,24 @@ fun registerCommands() {
             }
         }
     }
+    commandTree("bot") {
+        commandApiCommand("login") {
+            stringArgument("token")
+            playerExecutor { player, args ->
+                val token: String by args
+                val prefix = "TODO" //TODO: Prefix
+                val robotData = getRobotDataByPrefix(prefix)
+                if (robotData.token != token) {
+                    player.sendMessage(Component.text("INVALID_TOKEN"))
+                    return
+                }
+                //TODO: Bot amount check
+                AuthMeApi.getInstance().
+
+            }
+        }
+
+    }
 }
 
 
